@@ -1,5 +1,6 @@
 {
   "name": "multipage",
+  "homepage": "https://geoffreymamcer.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.10.4",
