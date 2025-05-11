@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #00f0ff;
+  --primary-dark: #0066ff;
+  --background-dark: #0f172a;
+  --background-darker: #020617;
+  --background-light: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-darker);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  transition: var(--transition);
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  margin-left: 60px;
+  transition: var(--transition);
+}
+
+.app.sidebar-open .main-content {
+  margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .app.sidebar-open .main-content {
+    margin-left: 0;
+  }
+}
